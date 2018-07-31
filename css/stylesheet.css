@@ -1,0 +1,1117 @@
+/* 網頁重設 CSS - 排版一致 */
+@import url("reset.css"); 
+
+/* 解決各個 Browser 預設樣式差異 Ver. 3.0.2 
+@import url("normalize.css"); */
+
+/* 側選單 */
+@import url("asideMenu.css");
+
+/* lightCase */
+@import url("lightCase/lightcase.css");
+
+@font-face {
+	font-family: 'CenturyGothic';
+	src:url('../fonts/CenturyGothic/CenturyGothic.eot');
+	src:url('../fonts/CenturyGothic/CenturyGothic.eot#iefix') format('embedded-opentype'),
+		url('../fonts/CenturyGothic/CenturyGothic.woff') format('woff'),
+		url('../fonts/CenturyGothic/CenturyGothic.ttf') format('truetype'),
+		url('../fonts/CenturyGothic/CenturyGothic.svg#CenturyGothic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CenturyGothic-Bold';
+	src:url('../fonts/CenturyGothic-Bold/CenturyGothic-Bold.eot');
+	src:url('../fonts/CenturyGothic-Bold/CenturyGothic-Bold.eot#iefix') format('embedded-opentype'),
+		url('../fonts/CenturyGothic-Bold/CenturyGothic-Bold.woff') format('woff'),
+		url('../fonts/CenturyGothic-Bold/CenturyGothic-Bold.ttf') format('truetype'),
+		url('../fonts/CenturyGothic-Bold/CenturyGothic-Bold.svg#CenturyGothic-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CenturyGothic-BoldItalic';
+	src:url('../fonts/CenturyGothic-BoldItalic/CenturyGothic-BoldItalic.eot');
+	src:url('../fonts/CenturyGothic-BoldItalic/CenturyGothic-BoldItalic.eot#iefix') format('embedded-opentype'),
+		url('../fonts/CenturyGothic-BoldItalic/CenturyGothic-BoldItalic.woff') format('woff'),
+		url('../fonts/CenturyGothic-BoldItalic/CenturyGothic-BoldItalic.ttf') format('truetype'),
+		url('../fonts/CenturyGothic-BoldItalic/CenturyGothic-BoldItalic.svg#CenturyGothic-BoldItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CenturyGothic-Italic';
+	src:url('../fonts/CenturyGothic-Italic/CenturyGothic-Italic.eot');
+	src:url('../fonts/CenturyGothic-Italic/CenturyGothic-Italic.eot#iefix') format('embedded-opentype'),
+		url('../fonts/CenturyGothic-Italic/CenturyGothic-Italic.woff') format('woff'),
+		url('../fonts/CenturyGothic-Italic/CenturyGothic-Italic.ttf') format('truetype'),
+		url('../fonts/CenturyGothic-Italic/CenturyGothic-Italic.svg#CenturyGothic-Italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    width: 100%;
+    font-family: CenturyGothic, sourcehansans-tc-extralight, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    /*background: url("../images/gallery_bg.png");*/
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* 滑鼠失效 */
+
+.disable-select-cilck {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Intro 導覽頁 --> 開始 */
+
+#stage1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.invisibleBackground {
+    background: rgba(41, 170, 255,1);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+figure.intro-text {
+    width: 330px;
+    height: 400px;
+    text-align: center; /* 文字置中 */
+    vertical-align: middle;
+    top: 50%;
+    left: 50%;
+    margin: -165px 0 0 -165px; /*上 右 下 左*/
+    position: absolute;
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+    .intro-moreBtn {
+        width: 120px;
+        height: 20px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px 5px 0 10px;
+        border: 1px rgba(255,255,255,1) solid;
+        top: 70px;
+        position: relative;
+    }
+    
+    a.moreBtn {
+        font-family: CenturyGothic-Bold, sourcehansans-tc-bold, Microsoft JhengHei, 微軟正黑體, sans-serif;
+        color: rgba(255,255,255,1);
+        font-size: 0.9em;
+        text-decoration: none;
+        letter-spacing: 4px;
+        line-height: 0.6em;
+        text-align: center;
+    }
+    
+    a.moreBtn :hover {
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        background: rgba(41, 170, 255,1);
+        color: rgba(255,255,255,1);
+        text-decoration: none;
+        border: 1px rgba(255,255,255,1) solid;
+        box-shadow: 0px 0px 100px rgba(255,255,255,1);
+    }
+    
+    .intro-title {
+        display: inline-block;
+        width: 80%;
+        height: auto;
+    }
+    
+    .intro-scrollBtn {
+        position: absolute;
+        top: 250px;
+        left: 46%;
+        width: 30px;
+        height: 30px;
+    }
+    
+}
+
+@media screen and (min-width: 481px) {
+    
+    .intro-moreBtn {
+        width: 180px;
+        height: 30px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px 5px 0 10px;
+        border: 1px rgba(255,255,255,1) solid;
+        top: 70px;
+        position: relative;
+    }
+    
+    a.moreBtn {
+        font-family: CenturyGothic-Bold, sourcehansans-tc-bold, Microsoft JhengHei, 微軟正黑體, sans-serif;
+        color: rgba(255,255,255,1);
+        font-size: 1.2em;
+        text-decoration: none;
+        letter-spacing: 4px;
+        text-align:  center;
+    }
+    
+    a.moreBtn :hover {
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        background: rgba(41, 170, 255,1);
+        color: rgba(255,255,255,1);
+        text-decoration: none;
+        border: 1px rgba(255,255,255,1) solid;
+        box-shadow: 0px 0px 75px rgba(255,255,255,1);
+    }
+    
+    .intro-scrollBtn {
+        position: absolute;
+        top: 80%;
+        left: 43%;
+        width: 50px;
+        height: 50px;
+    }
+    
+}
+
+/* Intro 導覽頁 --> 結束 */
+
+/* Main 視覺頁 --> 開始 */
+
+#stage2 {
+    position: relative;
+    /*width: 100%;
+    height: 100%;*/
+    display: block;
+    margin: 0 auto;
+    background: url("../images/about_bg.png");
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+}
+
+#main-visual {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    margin-top: -300px;
+    margin-left: -250px;
+    z-index: 1;
+}
+
+/* 手機螢幕 */
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+    
+    img#mainTitleTaiwan {
+        display: none;
+    }
+    
+    img#mainLogoTaiwan {
+        display: none;
+    }
+    
+    img#mainLogoEng {
+        display: none;
+    }
+    
+    img#mainTitleEng {
+        display: none;
+    }
+    
+    img#mainTabletMobiles {
+        width: 90%;
+        height: auto;
+        display: inline-block;
+        margin-top: 25%;
+        margin-left: 5%;
+        position: absolute;
+    }
+    
+    #main-visual {
+        display: none;
+    }
+    
+    #scrollbtn-main {
+        position: absolute;
+        top: 70%;
+        left: 49%;
+        width: 30px;
+        height: auto;
+    }
+}
+
+/* 平板螢幕 */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    
+    img#mainTitleTaiwan {
+        display: none;
+    }
+    
+    img#mainLogoTaiwan {
+        display: none;
+    }
+    
+    img#mainLogoEng {
+        display: none;
+    }
+    
+    img#mainTitleEng {
+        display: none;
+    }
+    
+    img#mainTabletMobile {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+    
+    img#mainTabletMobiles {
+        display: none;
+    }
+}
+
+@media only screen and (min-height: 0px) and (max-height: 767px) {
+    
+    img#mainTitleTaiwan {
+        display: none;
+    }
+    
+    img#mainLogoTaiwan {
+        display: none;
+    }
+    
+    img#mainLogoEng {
+        display: none;
+    }
+    
+    img#mainTitleEng {
+        display: none;
+    }
+    
+    #main-visual img#mainTabletMobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 10%;
+    }
+    
+    #scrollbtn-main {
+        position: absolute;
+        top: 86%;
+        left: 49%;
+        width: 30px;
+        height: auto;
+    }
+}
+
+
+/* 一般螢幕 */
+
+@media only screen and (min-width: 768px) {
+    
+    img#mainTitleTaiwan {
+        width: 253px;
+        height: 102px;
+        position: absolute;
+        z-index: 4;
+        top: -30px;
+        left: 320px;
+    }
+    
+    img#mainLogoTaiwan {
+        width: 332px;
+        height: 418px;
+        position: absolute;
+        z-index: 20;
+        top: 20px;
+        left: 80px;
+    }
+    
+    img#mainLogoEng {
+        width: 330px;
+        height: 417px;
+        position: absolute;
+        z-index: 19;
+        top: 80px;
+        left: 80px;
+    }
+    
+    img#mainTitleEng {
+        width: 290px;
+        height: 89px;
+        position: absolute;
+        z-index: 4;
+        left: -80px;
+        top: 490px;
+    }
+    
+    img#mainTabletMobile {
+        display: none;
+    }
+    
+    img#mainTabletMobiles {
+        display: none;
+    }
+    
+    #scrollbtn-main {
+        position: absolute;
+        top: 85%;
+        left: 49%;
+        width: 40px;
+        height: auto;
+    }
+}
+
+
+/* Main 視覺頁 --> 結束 */
+
+/* Concept 概念頁 --> 開始 */
+
+
+#stage3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background: url("../images/about_bg.png");
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+}
+
+@media screen and (min-width: 0px) and (max-width: 467px) {
+    
+    #concept {
+        display: none;
+    }
+    
+    #responsive-concept {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    img#responsive-concept-img {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    img#scroll-buttom-concept {
+        width: 30px;
+        height: auto;
+        display: inline-block;
+        position: absolute;
+        top: 500px;
+        right: 200px;
+    }
+    
+}
+
+@media screen and (min-width: 468px) {
+    
+#concept {
+    position: absolute;
+    display: block;
+    width: 600px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    margin: -400px 0 0 -300px;
+}
+
+#concept > .concept-title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    padding-top: 80px;
+    margin-bottom: 30px; // 與下面 quote 隔 30px 空間 //
+}
+
+#concept > img.concept-titleImg {
+    width: 100%
+    height: auto;
+}
+
+#concept > .concept-text {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#concept > .concept-text p.textTop {
+    font-family: CenturyGothic, sourcehansans-tc-regular, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    line-height: 1.8em;
+    font-size: 0.9em;
+    color: rgb(225,54,153);
+    letter-spacing: 0.21em;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.concept-text a {
+    text-decoration: none;
+}
+
+#concept > img.concept-quoteImg {
+    width: 100%;
+    height: auto;
+}
+
+#concept-textBottom p {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+img.concept-leftImg {
+    width: 72px;
+    height: 99px;
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: -50px;
+    
+}
+
+img.concept-rightImg {
+    width: 141px;
+    height: 176px;
+    display: block;
+    position: absolute;
+    top: 550px;
+    left: 550px;
+    
+}
+
+#responsive-concept {
+    display: none;
+}
+    
+}
+
+
+
+
+/* Concept 概念頁 --> 開始 */
+
+/* Trailers 預告頁 --> 開始 */
+
+#stage4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.trailers-text {
+    width: 640px;
+    height: 620px;
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    margin: -320px 0 0 -310px;
+    text-align: center;
+    line-height: 125px;
+}
+
+.invisibleBackground-trailers {
+    background: rgba(245,54,153,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-boxshadow {
+    box-shadow: 0px 0px 70px 10px rgba(0,0,0,0.2);
+    width: 640px;
+    height: 360px;
+}
+
+/* Trailers 預告頁 --> 結束 */
+
+/* Info 資訊頁 --> 開始 */
+
+#stage5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.invisibleBackground-info {
+    background: url(../images/background/pattern.png);
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+#invisibleBackground-info-gradient {
+    background:-webkit-linear-gradient(-45deg, rgba(64, 176, 231, 0.7) 0%, rgba(168, 162, 216, 0.7) 49%, rgba(228, 33, 135, 0.7) 100%);
+    background: -moz-linear-gradient(-45deg, rgba(64, 176, 231, 0.7) 0%, rgba(168, 162, 216, 0.7) 49%, rgba(228, 33, 135, 0.7) 100%);
+    background: -o-linear-gradient(-45deg, rgba(64, 176, 231, 0.7) 0%, rgba(168, 162, 216, 0.7) 49%, rgba(228, 33, 135, 0.7) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(64, 176, 231, 0.7) 0%, rgba(168, 162, 216, 0.7) 49%, rgba(228, 33, 135, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(64, 176, 231, 0.7) 0%, rgba(168, 162, 216, 0.7) 49%, rgba(228, 33, 135, 0.7) 100%);
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.info-window {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -300px 0 0 -300px;
+}
+
+.info-title {
+    width: 600px;
+    position: absolute;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+img.info-title-size {
+    width: 438px;
+    height: 34px;
+}
+
+section.info-block {
+    background-color:  rgba(249, 250, 251, 0.85);
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.35);
+    width: 610px;
+    height: 430px;
+    top: 100px;
+    position: absolute;
+}
+
+img.info-plus {
+    width: 35px;
+    height: 35px;
+}
+
+img.info-tpe {
+    width: 227px;
+    height: 352px;
+}
+
+img.info-mcu {
+    width: 218px;
+    height: 382px;
+}
+
+ul.info-ul {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+ul.info-ul > li {
+    display: inline-block;
+}
+
+ul.info-ul > li.li-plus-icon {
+    height: 400px;
+    vertical-align: middle;
+}
+
+.info-btn {
+    position: absolute;
+    top: 550px;
+    left: 47%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Info 資訊頁 --> 結束 */
+
+/* Gallery 展覽頁 --> 開始 */
+
+/*#galleryTitle {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 30px;    
+}
+
+img.galleryTitleimg {
+    width: 331px;
+    height: 26px;
+}
+*/
+
+#stage6 {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background: url("../images/about_bg.png");
+}
+
+#galleryContainer { 
+    position: relative; 
+    width: 100%; 
+    margin: 0 auto; // 置中
+    /* You can see the purpose of transition by resizing the window.    */
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 100;
+}
+
+header#galleryTop {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+section#galleryTitle {
+    margin: 20px 0 30px 0;
+}
+
+section#filter-menubar {
+    text-align: center;
+    width: 100%; //Responsive
+    height: 100%; //Responsive
+    margin: 0 auto;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+    background: rgba(41, 170, 255,1);
+    z-index: 200;
+}
+
+ul#filters {
+    margin: 10px 50px 10px 50px;
+    padding: 0;
+    list-style: none;
+}
+
+ul#filters li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: -10px;
+    padding-bottom: -10px;
+    line-height: 40px;
+}
+
+ul#filters li span {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(41, 170, 255,1);
+    border: 0.15em rgba(255,255,255,1) solid;
+    border-radius: 15px;
+    padding: 5px 20px;
+    font-family: CenturyGothic-Bold, sourcehansans-tc-regular, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    font-size: 0.9em;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-align:  center;
+    cursor: pointer;
+}
+
+ul#filters li span.active {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    font-family: CenturyGothic-Bold, sourcehansans-tc-regular, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    font-size: 0.9em;
+    color: rgba(41, 170, 255, 1);
+    background: rgba(255, 255, 255,1);
+    border: 3px rgba(41, 170, 255,1) solid;
+    border-radius: 15px;
+    padding: 5px 20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-align:  center;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 1px rgba(255,255,255,0.5);
+}
+
+/* Gallery Portfolio */
+
+
+#galleryPortfolio {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+
+#galleryPortfolio .portfolio {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    width: 23%;
+    margin: 1%;
+    display: none;
+    float: left;
+    overflow: hidden;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#galleryPortfolio .portfolio-wrapper {
+    overflow: hidden;
+    position: relative !important;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+#galleryPortfolio .portfolio img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 預設隱藏標籤 */
+
+#galleryPortfolio .portfolio .label {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    bottom: -50px;
+    text-align: center;
+}
+
+#galleryPortfolio .portfolio .label-text {
+    color: rgba(255,255,255,1);
+    position: relative;
+    z-index: 500;
+    padding: 5px 8px;
+    font-family: CenturyGothic, sourcehansans-tc-regular, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+#galleryPortfolio .portfolio .label-bg {
+    background: rgba(41, 170, 255, 1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#galleryPortfolio .portfolio .text-category {
+    display: block;
+    font-family: CenturyGothic, sourcehansans-tc-extralight, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+    line-height: 1.8em;
+}
+
+
+/* 平板螢幕尺寸 */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    
+    #galleryPortfolio {
+        width: 768px; 
+    }
+    
+}
+
+
+/*  手機螢幕尺寸 - 為 320px 寬訂做 */
+
+@media only screen and (max-width: 767px) {
+    
+    #galleryPortfolio { 
+        width: 95%; 
+    }
+    
+    #galleryPortfolio .portfolio {
+        width: 48%;
+        margin: 1%;
+    }        
+    #ads {
+        display: none;
+    }
+    
+}
+
+/*  手機螢幕尺寸 - 為 480px 寬訂做 */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+    #galleryPortfolio {
+        width: 70%;
+    }
+    
+    #ads {
+        display: none;
+    }
+    
+}
+    
+/* Gallery 展覽頁 --> 結束 */
+
+/* Visual 視籌頁 --> 開始 */
+
+#stage7 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background: url("../images/about_bg.png");
+}
+
+#visual-introduce {
+    width: 700px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -320px;
+    position: absolute;
+    text-align: center;
+    font-family: CenturyGothic, sourcehansans-tc-regular, Microsoft JhengHei, 微軟正黑體, sans-serif;
+}
+
+.visual-content {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: CenturyGothic, sourcehansans-tc-regular, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    margin-left: 70px;
+}
+
+ul.visual-grid li {
+    max-width: 140px;
+    width: 250px;
+    height: 240px;
+    float: left;
+    text-align: center;
+    margin-left: 60px;
+    margin-top: 15px;
+    line-height: 1.8em;
+    letter-spacing: 1.4px;
+    font-weight: bold;
+    font-family: CenturyGothic, sourcehansans-tc-regular, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    font-size: 0.86em;
+}
+
+.visual-title {
+    padding-bottom: 20px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+
+/* Visual 視籌頁 --> 結束 */
+
+/* DMD 關於頁 --> 開始 */
+
+#stage8 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background: rgba(41, 170, 255,1);
+    background-size: cover;
+    font-family: CenturyGothic, sourcehansans-tc-extralight, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    background: 
+}
+
+img.dmd-area {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+#dmd-introduce-box {
+    border: 10px rgba(255,255,255,1) solid;
+    background: rgba(41, 170, 255,0.9);
+    padding: 20px;
+    text-align: justify;
+    position: relative;
+    top: 3em;
+    color: rgba(255,255,255,1);
+    line-height: 1.7em;
+    letter-spacing: 0.15em;
+    box-shadow: 0px 0px 150px rgba(0,0,0,0.4);
+    font-family: CenturyGothic-Bold, sourcehansans-tc-regular, Microsoft JhengHei, 微軟正黑體, sans-serif;
+}
+
+.dmd-moreBtn {
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    padding:5px 0px 3px 10px;
+    border: 1px rgba(255,255,255,1) solid;
+    top: 10px;
+    position: relative;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+a.dmd-moreBtn-a {
+    font-family: CenturyGothic-Bold, sourcehansans-tc-bold, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    color: rgba(255,255,255,1);
+    font-size: 1em;
+    text-decoration: none;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+a.dmd-moreBtn-a :hover {
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    color: rgba(41, 170, 255,1);
+    text-decoration: none;
+    background: rgba(255,255,255,1);
+}
+
+.box {
+    width: 800px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -200px;
+    display: block;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* DMD 關於頁 --> 結束 */
+
+
+footer#copyright {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background-color: rgba(41, 170, 255, 0.7);
+    z-index: 10000;
+    text-align: center;
+    margin: 0px auto;
+    line-height: 30px; //垂直置中
+    display: block;
+    
+}
+
+footer#copyright p {
+    font-size: 0.5em;
+    font-family: CenturyGothic-Bold, sourcehansans-tc-regular, Microsoft JhengHei, 微軟正黑體, sans-serif;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.065em;
+}
+
+footer#copyright p a {
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+}
+
+/* 往上捲按鈕 */
+
+@media screen and (max-width: 480px) {
+    
+    div.scrollUp {
+        left: 28px;
+        top: 90px;
+        margin: 0 auto;
+        display: block;
+        position: fixed;
+        z-index: 100;
+    }
+    
+    img.backtoTop-size {
+        width: 45px;
+        height: 45px;
+    }
+    
+}
+
+@media screen and (min-width: 481px) {
+    
+    div.scrollUp {
+        right: 20px;
+        bottom: 40px;
+        margin: 0 auto;
+        display: block;
+        position: fixed;
+        z-index: 100;
+    }
+    
+    img.backtoTop-size {
+        width: 60px;
+        height: 60px;
+    }
+    
+}
